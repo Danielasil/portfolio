@@ -9,7 +9,7 @@
   inset: 0;
 
   z-index: -1;
-  background: transparent;
+  background: rgba(255,255,255,0.06);
   backdrop-filter: blur(26px) saturate(150%);
   -webkit-backdrop-filter: blur(26px) saturate(150%);
   mask-image: linear-gradient(
