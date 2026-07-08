@@ -42,7 +42,27 @@ const handleLeave = (e) => {
 };
 
   return (
-    <nav className="nav-menu fixed top-0 left-1/2 -translate-x-1/2 z-50 flex h-30 w-full items-center justify-between px-10 py-10 text-[16px] text-[var(--site-text)] md:h-30 md:px-8 md:text-[20px]">
+    <nav 
+     style={{
+    backdropFilter: "blur(30px)",
+    WebkitBackdropFilter: "blur(30px)",
+    background: "rgba(255,255,255,0.01)",
+     maskImage: `linear-gradient(
+      to bottom,
+      black 0%,
+      black 56%,
+      rgba(0,0,0,.74) 74%,
+      transparent 100%
+    )`,
+    WebkitMaskImage: `linear-gradient(
+      to bottom,
+      black 0%,
+      black 56%,
+      rgba(0,0,0,.74) 74%,
+      transparent 100%
+    )`,
+  }}
+    className="nav-menu fixed top-0 left-1/2 -translate-x-1/2 z-50 flex h-30 w-full items-center justify-between px-10 py-10 text-[16px] text-[var(--site-text)] md:h-30 md:px-8 md:text-[20px]">
       <a 
       ref={navRef}
       onMouseEnter={handleEnter}

@@ -274,7 +274,7 @@ function Hero() {
 
         <div
           ref={heroImageRef}
-          className="absolute z-20 md:w-[180px] md:h-[180px] w-[130px] h-[130px] bg-[var(--site-image-bg)] rounded-md top-1/2 left-1/2 will-change-transform transition-transform duration-300 ease-out"
+          className="absolute z-20 md:w-[180px] md:h-[180px] w-[130px] h-[130px] bg-[var(--site-bg)] rounded-md top-1/2 left-1/2 will-change-transform transition-transform duration-300 ease-out"
           style={{
             transform:
               "translate(calc(-50% + var(--hero-image-x, 0px)), calc(-50% + var(--hero-image-y, 0px)))",

@@ -2,16 +2,15 @@
   box-sizing: border-box;
   width: calc(100% - 2rem);
   isolation: isolate;
+  position: fixed;
 }
 .nav-menu::before {
   content: "";
   position: absolute;
   inset: 0;
-   background: rgba(255,255,255,.12);
-
-  backdrop-filter: blur(26px);
-  -webkit-backdrop-filter: blur(26px);
   z-index: -1;
+  
+
 }
   
   
