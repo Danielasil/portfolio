@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "@fontsource/italiana";
+
+@theme {
+  --font-italiana: "Italiana", serif;
+}
+
+:root {
+  --site-bg: #1b1b1b;
+  --site-text: #ffffff;
+  --site-theme-button-bg: rgba(255, 255, 255, 0.1);
+  --site-theme-button-color:#ffffff;
+  --site-muted: rgba(255, 255, 255, 0.5);
+  --site-border: rgba(255, 255, 255, 0.88);
+  --site-border-soft: rgba(255, 255, 255, 0.4);
+  --site-hover: rgba(255, 255, 255, 0.1);
+  --site-hover-strong: rgba(255, 255, 255, 0.2);
+  --site-button-bg: #ffffff;
+  --site-button-text: #1b1b1b;
+  --hero-panel-bg: radial-gradient(
+    circle,
+    #1e212305 0%,
+    #1B1B1B 100%
+  );
+  --hero-panel-orb: rgba(28, 32, 43, 0.68);
+  --hero-panel-orb-soft: rgba(39, 38, 43, 0.34);
+
+  
+  --site-tag-bg: rgba(0, 0, 0, 0.253);
+  --site-tag-soft-bg: rgba(0, 0, 0, 0.2);
+
+  --site-image-bg: #514747;
+  --site-shadow: rgba(0, 0, 0, 0.3);
+  --site-orb: rgba(105, 124, 132, 0.38);
+  --hero-fold: rgba(26, 28, 28, 0.82);
+  --hero-highlight: rgba(17, 16, 16, 0.239);
+  --hero-highlight-soft: rgba(255, 255, 255, 0.06);
+  --hero-shadow: rgba(0, 0, 0, 0.42);
+  --hero-shadow-soft: rgba(0, 0, 0, 0.26);
+  --hero-groove: rgba(19, 14, 14, 0.204);
+  --cursor-color: #ffffff;
+  --cursor-line: rgba(255, 255, 255, 0.072);
+  --cursor-project-bg: rgba(22, 19, 19, 0.675);
+  --cursor-project-text: #ffffff;
+  background-color: var(--site-bg);
+  cursor: none;
+  scroll-behavior: smooth;
+}
+
+:root[data-theme="light"] {
+  --site-bg: #f6f7f5;
+  --site-theme-button-bg: #b7afa523;
+  --site-theme-button-color:#887777e0;
+
+  --site-text: #887777e0;
+   --hero-panel-bg: radial-gradient(
+    circle,
+    #e9e1cf98 0%,
+    #fdfdfdf8 100%
+  );
+  --hero-panel-orb: rgba(219, 181, 157, 0.54);
+  --hero-panel-orb-soft: rgba(240, 223, 211, 0.26);
+  --site-muted: rgba(27, 27, 27, 0.401);
+  --site-border: #887777e0;
+  --site-border-soft: rgba(27, 27, 27, 0.24);
+  --site-hover: rgba(27, 27, 27, 0.08);
+  --site-hover-strong: rgba(27, 27, 27, 0.05);
+  --site-button-bg: #655f5fe0;
+  --site-button-text: #ffffff;
+
+  --site-tag-bg: rgba(53, 50, 50, 0.26);
+  --site-tag-soft-bg:  rgba(255, 255, 255, 0.26);
+
+  
+  --site-text-tags: #fffefee0;
+  --site-image-bg: #d8ddd6;
+  --site-shadow: rgba(27, 27, 27, 0.16);
+  --site-orb: rgba(106, 137, 128, 0.26);
+  --hero-fold: rgba(255, 255, 255, 0.82);
+  --hero-highlight: rgba(255, 255, 255, 0.9);
+  --hero-highlight-soft: rgba(255, 255, 255, 0.58);
+  --hero-shadow: rgba(196, 181, 181, 0.18);
+  --hero-shadow-soft: rgba(152, 145, 145, 0.028);
+  --hero-groove: rgba(169, 161, 161, 0.1);
+  --cursor-color: #887777e0;
+  --cursor-line: #9386861b;
+  --cursor-project-bg: rgba(69, 59, 59, 0.49);
+  --cursor-project-text: #ffffff;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 768px) {
+  :root {
+    cursor: auto;
+  }
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-width: 0;
+  overflow-x: clip;
+  background-color: var(--site-bg);
+  color: var(--site-text);
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 3s linear infinite;
+}
+
+@keyframes contactFloatA {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--contact-rotate, 0deg));
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) rotate(calc(var(--contact-rotate, 0deg) + 5deg));
+  }
+}
+
+@keyframes contactFloatB {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--contact-rotate, 0deg));
+  }
+  50% {
+    transform: translate3d(14px, 16px, 0) rotate(calc(var(--contact-rotate, 0deg) - 6deg));
+  }
+}
+
+@keyframes contactFloatC {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--contact-rotate, 0deg));
+  }
+  50% {
+    transform: translate3d(-12px, -14px, 0) rotate(calc(var(--contact-rotate, 0deg) + 7deg));
+  }
+}
+
+.animate-contact-float-a {
+  animation: contactFloatA 7s ease-in-out infinite;
+}
+
+.animate-contact-float-b {
+  animation: contactFloatB 8s ease-in-out infinite;
+}
+
+.animate-contact-float-c {
+  animation: contactFloatC 9s ease-in-out infinite;
+}

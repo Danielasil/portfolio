@@ -1,0 +1,70 @@
+
+.cursor-square {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  
+  border: 1px solid var(--cursor-color);
+  background-color: var(--cursor-color);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 180ms ease, height 180ms ease, border-radius 180ms ease,
+    color 180ms ease;
+}
+
+
+.cursor-line-horizontal {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 0.2px;
+  background: var(--cursor-line);
+  pointer-events: none;
+  z-index: 9998;
+}
+.cursor-square.project-mode {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  height:100px;
+  background: var(--cursor-project-bg);
+  color: var(--cursor-project-text);
+  backdrop-filter: blur(20px);
+  mix-blend-mode: normal;
+}
+
+.cursor-square div {
+  font-size: 14px; 
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 600;
+  
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.cursor-line-vertical {
+  position: fixed;
+  top: 0;
+  width:  0.2px;
+  height: 100vh;
+  background: var(--cursor-line);
+  pointer-events: none;
+  z-index: 9998;
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 768px) {
+  .cursor-square,
+  .cursor-line-horizontal,
+  .cursor-line-vertical {
+    display: none;
+  }
+}
